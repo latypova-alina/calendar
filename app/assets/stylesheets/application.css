@@ -1,0 +1,98 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require simple_calendar
+ 
+ */
+body{
+  background-image: url(http://weblabfon.com/_ld/3/355_01.png);
+  background-repeat: repeat;
+}
+li {
+  list-style-type: none;
+  margin: 0;
+}
+ul {
+  margin-left: 0; 
+    padding-left: 0;
+}
+
+section {
+    background-image: url(http://uconstructor.com/_ld/3/71495855.jpg);
+    width: 100%;
+    height: 72%;
+    display: flex;
+    padding: 10px;
+    background-color: #FBF5EF;
+    border: 1px solid #d6d6d6;
+    border-radius: 2px;
+}
+.form_for_meeting{
+  background-image: url(http://uconstructor.com/_ld/3/71495855.jpg);
+  width: 100%;
+    height: 72%;
+   /* display: flex;*/
+    padding: 10px;
+    background-color: #FBF5EF;
+    border: 1px solid #d6d6d6;
+    border-radius: 2px;
+}
+.form_for_meeting h3{
+  
+  margin-top: 0;
+}
+
+.profile_section div {
+    width: 50%;
+    border-radius: 2px;
+}
+.user_data{
+     margin-right: 10px;
+  }
+
+.menu a {
+  display:block;
+    width:130px;
+    height:30px;
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    font-size: 20px;
+    
+    
+}
+
+a:hover {
+  text-decoration: none;
+  background: #FFDEAD;
+  
+  color: #696969;
+}
+.user_data h3{
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+    
+    margin-top: 0;
+}
+password_field{
+  width: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+

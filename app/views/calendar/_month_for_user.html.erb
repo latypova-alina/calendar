@@ -1,0 +1,6 @@
+<% content_for :calendar do %>
+
+<% @meetings = current_user.meetings %>
+
+<%= render 'month' %>
+<%end%>

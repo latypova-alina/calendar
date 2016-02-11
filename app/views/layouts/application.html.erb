@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" >
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calenda</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="row">
+ 
+ <div class = "col-md-3">
+    <div class = "col-md-12">
+      <div class = 'form_for_meeting' >
+        <h3><%=link_to "Create new event", new_meeting_path %></h3>
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+ 
+ <div class = "col-md-6">
+  <%=alert%> 
+  <%=notice%> 
+    <% if content_for? :calendar %>
+      <%= yield :calendar %>
+    <%else%>
+      <%= render 'calendar/month' %>
+    <%end%>
+  </div>
+ 
+ <div class = "col-md-3">
+    
+    <% if content_for?(:user_form) %>
+      <div class = "form_for_meeting">
+        <%= yield :user_form %>
+      </div>
+    <% else if current_user != nil %>
+      <section class = "profile_section"> 
+        <div class='user_data'>
+          <h3><%= current_user.name %></h3>
+          <p><%= current_user.email %></p>
+        </div>
+        <div class = 'user_menu'>
+          <ul class = 'menu' > 
+            <li><%= link_to 'My dates', month_for_user_url %></li>
+            <li><%= link_to 'All dates', month_for_everyone_url %></li>
+            <li><%= link_to 'Edit profile', edit_user_path(current_user) %> </li> 
+            <li><%= link_to 'Sign out', signout_url %></li>
+          </ul> 
+        </div>
+      </section> 
+    <% else%> 
+      <div class = "form_for_meeting">
+        <%=button_to "Sign up", new_user_path, :class => "btn btn-primary", :method => :get  %>
+        <%=button_to "Sign in", new_session_path, :class => "btn btn-primary", :method => :get  %>
+      </div>
+    <%end%>
+  <% end %>
+  </div>
+ </div>
+</div>
+</body>
+</html>
