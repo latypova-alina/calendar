@@ -39809,3 +39809,987 @@ Processing by MeetingsController#new as HTML
   Rendered calendar/_month.html.erb (57.8ms)
   [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 38]]
 Completed 200 OK in 216ms (Views: 212.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-13 06:32:24 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#domain as HTML
+  Rendered welcome/domain.html.erb within layouts/application (2.9ms)
+  [1m[35mMeeting Load (1.7ms)[0m  SELECT "meetings".* FROM "meetings"
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (104.2ms)
+  Rendered calendar/_month.html.erb (165.1ms)
+Completed 200 OK in 1115ms (Views: 1090.6ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/assets/scaffolds.self-f59a273d6678752aa8c59bf374c3026999834cb0316915b217964f52da852a53.css?body=1" for 127.0.0.1 at 2016-02-13 06:32:26 +0300
+
+
+Started GET "/meetings/new" for 127.0.0.1 at 2016-02-13 06:32:30 +0300
+Processing by MeetingsController#new as HTML
+  Rendered meetings/_form.html.erb (50.1ms)
+  Rendered meetings/new.html.erb within layouts/application (56.1ms)
+  [1m[36mMeeting Load (0.7ms)[0m  [1mSELECT "meetings".* FROM "meetings"[0m
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (55.7ms)
+  Rendered calendar/_month.html.erb (66.5ms)
+Completed 200 OK in 220ms (Views: 216.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/meetings" for 127.0.0.1 at 2016-02-13 06:32:35 +0300
+Processing by MeetingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q9h9J3aVkX037zCOq//Xhc12xs3bd6VKnwiQgZx4heV84wUIdk1nKmXqz7mW6/ygUhbasE2WKRJmgPtB8snmsg==", "meeting"=>{"name"=>"a", "start_time(1i)"=>"2016", "start_time(2i)"=>"2", "start_time(3i)"=>"13", "start_time(4i)"=>"03", "start_time(5i)"=>"32"}, "commit"=>"Create Meeting"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `save' for nil:NilClass):
+  app/controllers/meetings_controller.rb:38:in `block in create'
+  app/controllers/meetings_controller.rb:37:in `create'
+
+
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.8ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.2ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (36.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (75.5ms)
+
+
+Started GET "/meetings" for 127.0.0.1 at 2016-02-13 06:33:22 +0300
+Processing by MeetingsController#index as HTML
+  [1m[35mMeeting Load (0.7ms)[0m  SELECT "meetings".* FROM "meetings"
+  Rendered meetings/index.html.erb within layouts/application (32.8ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (56.1ms)
+  Rendered calendar/_month.html.erb (60.4ms)
+Completed 200 OK in 176ms (Views: 166.8ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-13 06:33:27 +0300
+Processing by WelcomeController#domain as HTML
+  Rendered welcome/domain.html.erb within layouts/application (0.9ms)
+  [1m[36mMeeting Load (1.0ms)[0m  [1mSELECT "meetings".* FROM "meetings"[0m
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (55.2ms)
+  Rendered calendar/_month.html.erb (64.5ms)
+Completed 200 OK in 175ms (Views: 172.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/meetings/new" for 127.0.0.1 at 2016-02-13 06:33:29 +0300
+Processing by MeetingsController#new as HTML
+  Rendered meetings/_form.html.erb (9.9ms)
+  Rendered meetings/new.html.erb within layouts/application (11.3ms)
+  [1m[35mMeeting Load (0.7ms)[0m  SELECT "meetings".* FROM "meetings"
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (55.4ms)
+  Rendered calendar/_month.html.erb (65.1ms)
+Completed 200 OK in 159ms (Views: 157.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/meetings" for 127.0.0.1 at 2016-02-13 06:33:34 +0300
+Processing by MeetingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u7PUxEqIuB1DKJvxFmMyJs5pOasdFctz/Cr4YjFEmHyEiKzrSlBOShEtZMYrdxkDUQkl1ov0RysFopOiX/X7Kw==", "meeting"=>{"name"=>"o", "start_time(1i)"=>"2016", "start_time(2i)"=>"2", "start_time(3i)"=>"13", "start_time(4i)"=>"03", "start_time(5i)"=>"33"}, "commit"=>"Create Meeting"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `save' for nil:NilClass):
+  app/controllers/meetings_controller.rb:38:in `block in create'
+  app/controllers/meetings_controller.rb:37:in `create'
+
+
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.2ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (16.2ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (53.1ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (92.9ms)
+
+
+Started GET "/meetings" for 127.0.0.1 at 2016-02-13 06:34:11 +0300
+Processing by MeetingsController#index as HTML
+  [1m[36mMeeting Load (1.0ms)[0m  [1mSELECT "meetings".* FROM "meetings"[0m
+  Rendered meetings/index.html.erb within layouts/application (34.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (53.5ms)
+  Rendered calendar/_month.html.erb (57.7ms)
+Completed 200 OK in 185ms (Views: 175.8ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/meetings/new" for 127.0.0.1 at 2016-02-13 06:34:14 +0300
+Processing by MeetingsController#new as HTML
+  Rendered meetings/_form.html.erb (9.5ms)
+  Rendered meetings/new.html.erb within layouts/application (11.2ms)
+  [1m[35mMeeting Load (0.8ms)[0m  SELECT "meetings".* FROM "meetings"
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (51.9ms)
+  Rendered calendar/_month.html.erb (61.4ms)
+Completed 200 OK in 153ms (Views: 151.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/meetings" for 127.0.0.1 at 2016-02-13 06:34:17 +0300
+Processing by MeetingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hj2kv/pe9dM1ECiKQJJAXLfBf63EJ3rYx5WzmD3O9h0hBtyQ+oYDhGcV1719hmt5KKFj0FLG9oA+HdhYU3+VSg==", "meeting"=>{"name"=>"o", "start_time(1i)"=>"2016", "start_time(2i)"=>"2", "start_time(3i)"=>"13", "start_time(4i)"=>"03", "start_time(5i)"=>"34"}, "commit"=>"Create Meeting"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "meetings" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2016-02-13 03:34:17.768687"], ["updated_at", "2016-02-13 03:34:17.768687"]]
+  [1m[36m (65.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/meetings/26
+Completed 302 Found in 79ms (ActiveRecord: 67.2ms)
+
+
+Started GET "/meetings/26" for 127.0.0.1 at 2016-02-13 06:34:17 +0300
+Processing by MeetingsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[35mMeeting Load (0.4ms)[0m  SELECT  "meetings".* FROM "meetings" WHERE "meetings"."id" = $1 LIMIT 1  [["id", 26]]
+  Rendered meetings/show.html.erb within layouts/application (1.5ms)
+  [1m[36mMeeting Load (0.7ms)[0m  [1mSELECT "meetings".* FROM "meetings"[0m
+  Rendered calendar/_month.html.erb (9.1ms)
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (comparison of ActiveSupport::TimeWithZone with nil failed):
+    1: 
+    2: <% @meetings = Meeting.all if @meetings == nil %>
+    3: 
+    4: <%= month_calendar events: @meetings do |date, meetings| %>
+    5:   
+    6:   <%= date %>
+    7:   
+  app/views/calendar/_month.html.erb:4:in `_app_views_calendar__month_html_erb___4361804494784439930_70040219867500'
+  app/views/layouts/application.html.erb:32:in `_app_views_layouts_application_html_erb__2358050520364366646_70040223959620'
+
+
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (19.2ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (63.0ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (32.8ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (66.3ms)
+
+
+Started POST "/meetings" for 127.0.0.1 at 2016-02-13 06:45:11 +0300
+Processing by MeetingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hj2kv/pe9dM1ECiKQJJAXLfBf63EJ3rYx5WzmD3O9h0hBtyQ+oYDhGcV1719hmt5KKFj0FLG9oA+HdhYU3+VSg==", "meeting"=>{"name"=>"o", "start_time(1i)"=>"2016", "start_time(2i)"=>"2", "start_time(3i)"=>"13", "start_time(4i)"=>"03", "start_time(5i)"=>"34"}, "commit"=>"Create Meeting"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `save' for nil:NilClass):
+  app/controllers/meetings_controller.rb:38:in `block in create'
+  app/controllers/meetings_controller.rb:37:in `create'
+
+
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.3ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.1ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.2ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (30.4ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (61.9ms)
+
+
+Started POST "/meetings" for 127.0.0.1 at 2016-02-13 06:45:44 +0300
+Processing by MeetingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hj2kv/pe9dM1ECiKQJJAXLfBf63EJ3rYx5WzmD3O9h0hBtyQ+oYDhGcV1719hmt5KKFj0FLG9oA+HdhYU3+VSg==", "meeting"=>{"name"=>"o", "start_time(1i)"=>"2016", "start_time(2i)"=>"2", "start_time(3i)"=>"13", "start_time(4i)"=>"03", "start_time(5i)"=>"34"}, "commit"=>"Create Meeting"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `save' for nil:NilClass):
+  app/controllers/meetings_controller.rb:38:in `block in create'
+  app/controllers/meetings_controller.rb:37:in `create'
+
+
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.0ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.2ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.1ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (30.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (61.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-13 06:47:46 +0300
+Processing by WelcomeController#domain as HTML
+  Rendered welcome/domain.html.erb within layouts/application (0.9ms)
+  [1m[35mMeeting Load (1.3ms)[0m  SELECT "meetings".* FROM "meetings"
+  Rendered calendar/_month.html.erb (26.1ms)
+Completed 500 Internal Server Error in 107ms (ActiveRecord: 5.5ms)
+
+ActionView::Template::Error (comparison of ActiveSupport::TimeWithZone with nil failed):
+    1: 
+    2: <% @meetings = Meeting.all if @meetings == nil %>
+    3: 
+    4: <%= month_calendar events: @meetings do |date, meetings| %>
+    5:   
+    6:   <%= date %>
+    7:   
+  app/views/calendar/_month.html.erb:4:in `_app_views_calendar__month_html_erb___4361804494784439930_70040219867500'
+  app/views/layouts/application.html.erb:32:in `_app_views_layouts_application_html_erb__2358050520364366646_70040223959620'
+
+
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.4ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.9ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.9ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (30.3ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (62.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-13 06:47:53 +0300
+Processing by WelcomeController#domain as HTML
+  Rendered welcome/domain.html.erb within layouts/application (0.9ms)
+  [1m[36mMeeting Load (0.9ms)[0m  [1mSELECT "meetings".* FROM "meetings"[0m
+  Rendered calendar/_month.html.erb (10.2ms)
+Completed 500 Internal Server Error in 98ms (ActiveRecord: 0.9ms)
+
+ActionView::Template::Error (comparison of ActiveSupport::TimeWithZone with nil failed):
+    1: 
+    2: <% @meetings = Meeting.all if @meetings == nil %>
+    3: 
+    4: <%= month_calendar events: @meetings do |date, meetings| %>
+    5:   
+    6:   <%= date %>
+    7:   
+  app/views/calendar/_month.html.erb:4:in `_app_views_calendar__month_html_erb___4361804494784439930_70040219867500'
+  app/views/layouts/application.html.erb:32:in `_app_views_layouts_application_html_erb__2358050520364366646_70040223959620'
+
+
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (17.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.8ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (56.9ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (32.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (66.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-13 06:48:02 +0300
+Processing by WelcomeController#domain as HTML
+  Rendered welcome/domain.html.erb within layouts/application (0.8ms)
+  [1m[35mMeeting Load (0.8ms)[0m  SELECT "meetings".* FROM "meetings"
+  Rendered calendar/_month.html.erb (25.1ms)
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 4.3ms)
+
+ActionView::Template::Error (comparison of ActiveSupport::TimeWithZone with nil failed):
+    1: 
+    2: <% @meetings = Meeting.all if @meetings == nil %>
+    3: 
+    4: <%= month_calendar events: @meetings do |date, meetings| %>
+    5:   
+    6:   <%= date %>
+    7:   
+  app/views/calendar/_month.html.erb:4:in `_app_views_calendar__month_html_erb___4361804494784439930_70040219867500'
+  app/views/layouts/application.html.erb:32:in `_app_views_layouts_application_html_erb__2358050520364366646_70040223959620'
+
+
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.3ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.8ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.9ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (30.4ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (61.7ms)
+
+
+Started GET "/main_page" for 127.0.0.1 at 2016-02-13 06:49:27 +0300
+Processing by WelcomeController#domain as HTML
+  Rendered welcome/domain.html.erb within layouts/application (0.9ms)
+  [1m[36mMeeting Load (0.7ms)[0m  [1mSELECT "meetings".* FROM "meetings"[0m
+  Rendered calendar/_month.html.erb (9.1ms)
+Completed 500 Internal Server Error in 111ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (comparison of ActiveSupport::TimeWithZone with nil failed):
+    1: 
+    2: <% @meetings = Meeting.all if @meetings == nil %>
+    3: 
+    4: <%= month_calendar events: @meetings do |date, meetings| %>
+    5:   
+    6:   <%= date %>
+    7:   
+  app/views/calendar/_month.html.erb:4:in `_app_views_calendar__month_html_erb___4361804494784439930_70040219867500'
+  app/views/layouts/application.html.erb:32:in `_app_views_layouts_application_html_erb__2358050520364366646_70040223959620'
+
+
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (19.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.3ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (31.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (65.0ms)
+
+
+Started POST "/meetings" for 127.0.0.1 at 2016-02-13 06:50:15 +0300
+Processing by MeetingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hj2kv/pe9dM1ECiKQJJAXLfBf63EJ3rYx5WzmD3O9h0hBtyQ+oYDhGcV1719hmt5KKFj0FLG9oA+HdhYU3+VSg==", "meeting"=>{"name"=>"o", "start_time(1i)"=>"2016", "start_time(2i)"=>"2", "start_time(3i)"=>"13", "start_time(4i)"=>"03", "start_time(5i)"=>"34"}, "commit"=>"Create Meeting"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `save' for nil:NilClass):
+  app/controllers/meetings_controller.rb:38:in `block in create'
+  app/controllers/meetings_controller.rb:37:in `create'
+
+
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.2ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.4ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (81.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-13 07:58:04 +0300
+Processing by WelcomeController#domain as HTML
+  Rendered welcome/domain.html.erb within layouts/application (0.7ms)
+  [1m[35mMeeting Load (1.1ms)[0m  SELECT "meetings".* FROM "meetings"
+  Rendered calendar/_month.html.erb (24.3ms)
+Completed 500 Internal Server Error in 122ms (ActiveRecord: 5.3ms)
+
+ActionView::Template::Error (comparison of ActiveSupport::TimeWithZone with nil failed):
+    1: 
+    2: <% @meetings = Meeting.all if @meetings == nil %>
+    3: 
+    4: <%= month_calendar events: @meetings do |date, meetings| %>
+    5:   
+    6:   <%= date %>
+    7:   
+  app/views/calendar/_month.html.erb:4:in `_app_views_calendar__month_html_erb___4361804494784439930_70040219867500'
+  app/views/layouts/application.html.erb:32:in `_app_views_layouts_application_html_erb__2358050520364366646_70040223959620'
+
+
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.8ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (29.4ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (59.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-13 08:00:36 +0300
+Processing by WelcomeController#domain as HTML
+  Rendered welcome/domain.html.erb within layouts/application (0.6ms)
+  [1m[36mMeeting Load (0.4ms)[0m  [1mSELECT "meetings".* FROM "meetings"[0m
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (10.2ms)
+  Rendered calendar/_month.html.erb (13.6ms)
+Completed 200 OK in 99ms (Views: 97.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/meetings/new" for 127.0.0.1 at 2016-02-13 08:00:40 +0300
+Processing by MeetingsController#new as HTML
+  Rendered meetings/_form.html.erb (11.0ms)
+  Rendered meetings/new.html.erb within layouts/application (12.4ms)
+  [1m[35mMeeting Load (0.5ms)[0m  SELECT "meetings".* FROM "meetings"
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (19.8ms)
+  Rendered calendar/_month.html.erb (25.2ms)
+Completed 200 OK in 163ms (Views: 161.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/meetings" for 127.0.0.1 at 2016-02-13 08:00:44 +0300
+Processing by MeetingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3DSZvvaUodVQDyPCp3iyf2Jm8qelgQfLznWt6gAEuvDjD+GR9kxXggIK3PWabJla/Qbu2jNgi5M3/cYqbrXZpw==", "meeting"=>{"name"=>"a", "start_time(1i)"=>"2016", "start_time(2i)"=>"2", "start_time(3i)"=>"13", "start_time(4i)"=>"05", "start_time(5i)"=>"00"}, "commit"=>"Create Meeting"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `save' for nil:NilClass):
+  app/controllers/meetings_controller.rb:39:in `block in create'
+  app/controllers/meetings_controller.rb:37:in `create'
+
+
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (41.9ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (30.9ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (61.7ms)
+
+
+Started POST "/meetings" for 127.0.0.1 at 2016-02-13 08:01:08 +0300
+Processing by MeetingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3DSZvvaUodVQDyPCp3iyf2Jm8qelgQfLznWt6gAEuvDjD+GR9kxXggIK3PWabJla/Qbu2jNgi5M3/cYqbrXZpw==", "meeting"=>{"name"=>"a", "start_time(1i)"=>"2016", "start_time(2i)"=>"2", "start_time(3i)"=>"13", "start_time(4i)"=>"05", "start_time(5i)"=>"00"}, "commit"=>"Create Meeting"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `save' for nil:NilClass):
+  app/controllers/meetings_controller.rb:39:in `block in create'
+  app/controllers/meetings_controller.rb:37:in `create'
+
+
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.0ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.2ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.4ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (32.2ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (65.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-13 08:38:45 +0300
+Processing by WelcomeController#domain as HTML
+  Rendered welcome/domain.html.erb within layouts/application (0.8ms)
+  [1m[36mMeeting Load (0.6ms)[0m  [1mSELECT "meetings".* FROM "meetings"[0m
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (11.7ms)
+  Rendered calendar/_month.html.erb (21.1ms)
+Completed 200 OK in 118ms (Views: 115.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/meetings/new" for 127.0.0.1 at 2016-02-13 08:38:47 +0300
+Processing by MeetingsController#new as HTML
+  Rendered meetings/_form.html.erb (9.8ms)
+  Rendered meetings/new.html.erb within layouts/application (11.3ms)
+  [1m[35mMeeting Load (0.6ms)[0m  SELECT "meetings".* FROM "meetings"
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (10.3ms)
+  Rendered calendar/_month.html.erb (15.1ms)
+Completed 200 OK in 117ms (Views: 105.5ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/meetings" for 127.0.0.1 at 2016-02-13 08:38:55 +0300
+Processing by MeetingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1L3E1Ti2Z68lc3PA2lzTcnGUoUg+SlpOTRGLtKdZmt7rhrz6OG6R+Hd2jPfnSPhX7vS9Nair1ha0meB0yej5iQ==", "meeting"=>{"name"=>"l", "start_time(1i)"=>"2016", "start_time(2i)"=>"2", "start_time(3i)"=>"13", "start_time(4i)"=>"05", "start_time(5i)"=>"38"}, "commit"=>"Create Meeting"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `save' for nil:NilClass):
+  app/controllers/meetings_controller.rb:39:in `block in create'
+  app/controllers/meetings_controller.rb:37:in `create'
+
+
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.1ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (29.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (60.6ms)
+
+
+Started POST "/meetings" for 127.0.0.1 at 2016-02-13 08:41:02 +0300
+Processing by MeetingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1L3E1Ti2Z68lc3PA2lzTcnGUoUg+SlpOTRGLtKdZmt7rhrz6OG6R+Hd2jPfnSPhX7vS9Nair1ha0meB0yej5iQ==", "meeting"=>{"name"=>"l", "start_time(1i)"=>"2016", "start_time(2i)"=>"2", "start_time(3i)"=>"13", "start_time(4i)"=>"05", "start_time(5i)"=>"38"}, "commit"=>"Create Meeting"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "meetings" ("name", "start_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "l"], ["start_time", "2016-02-13 05:38:00.000000"], ["created_at", "2016-02-13 05:41:02.727406"], ["updated_at", "2016-02-13 05:41:02.727406"]]
+  [1m[36m (59.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/meetings/27
+Completed 302 Found in 85ms (ActiveRecord: 64.5ms)
+
+
+Started GET "/meetings/27" for 127.0.0.1 at 2016-02-13 08:41:02 +0300
+Processing by MeetingsController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mMeeting Load (0.5ms)[0m  SELECT  "meetings".* FROM "meetings" WHERE "meetings"."id" = $1 LIMIT 1  [["id", 27]]
+  Rendered meetings/show.html.erb within layouts/application (0.8ms)
+  [1m[36mMeeting Load (0.5ms)[0m  [1mSELECT "meetings".* FROM "meetings"[0m
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (12.2ms)
+  Rendered calendar/_month.html.erb (16.3ms)
+Completed 200 OK in 96ms (Views: 92.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/meetings/27/edit" for 127.0.0.1 at 2016-02-13 08:42:56 +0300
+Processing by MeetingsController#edit as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mMeeting Load (0.5ms)[0m  SELECT  "meetings".* FROM "meetings" WHERE "meetings"."id" = $1 LIMIT 1  [["id", 27]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "meetings".* FROM "meetings" WHERE "meetings"."id" = $1 LIMIT 1[0m  [["id", "27"]]
+  Rendered meetings/_form.html.erb (9.8ms)
+  Rendered meetings/edit.html.erb within layouts/application (12.1ms)
+  [1m[35mMeeting Load (0.5ms)[0m  SELECT "meetings".* FROM "meetings"
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (12.8ms)
+  Rendered calendar/_month.html.erb (17.6ms)
+Completed 200 OK in 149ms (Views: 130.0ms | ActiveRecord: 4.8ms)
+
+
+Started PATCH "/meetings/27" for 127.0.0.1 at 2016-02-13 08:43:13 +0300
+Processing by MeetingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l1ZDgM9rB0hhJ2+GsE0tJcOoO2uvLKUrgF/dhMtcBByobTuvz7PxHzMikLGNWQYAXMgnFjnNKXN517ZEpe1nSw==", "meeting"=>{"name"=>"Birthday", "start_time(1i)"=>"2016", "start_time(2i)"=>"2", "start_time(3i)"=>"13", "start_time(4i)"=>"05", "start_time(5i)"=>"38"}, "commit"=>"Update Meeting", "id"=>"27"}
+  [1m[36mMeeting Load (0.5ms)[0m  [1mSELECT  "meetings".* FROM "meetings" WHERE "meetings"."id" = $1 LIMIT 1[0m  [["id", 27]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "meetings" SET "name" = $1, "updated_at" = $2 WHERE "meetings"."id" = $3[0m  [["name", "Birthday"], ["updated_at", "2016-02-13 05:43:13.813569"], ["id", 27]]
+  [1m[35m (55.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/meetings/27
+Completed 302 Found in 67ms (ActiveRecord: 56.7ms)
+
+
+Started GET "/meetings/27" for 127.0.0.1 at 2016-02-13 08:43:13 +0300
+Processing by MeetingsController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mMeeting Load (0.5ms)[0m  [1mSELECT  "meetings".* FROM "meetings" WHERE "meetings"."id" = $1 LIMIT 1[0m  [["id", 27]]
+  Rendered meetings/show.html.erb within layouts/application (0.6ms)
+  [1m[35mMeeting Load (0.5ms)[0m  SELECT "meetings".* FROM "meetings"
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (12.6ms)
+  Rendered calendar/_month.html.erb (17.1ms)
+Completed 200 OK in 98ms (Views: 95.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/meetings/27/edit" for 127.0.0.1 at 2016-02-13 08:43:17 +0300
+Processing by MeetingsController#edit as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mMeeting Load (0.4ms)[0m  [1mSELECT  "meetings".* FROM "meetings" WHERE "meetings"."id" = $1 LIMIT 1[0m  [["id", 27]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "meetings".* FROM "meetings" WHERE "meetings"."id" = $1 LIMIT 1  [["id", "27"]]
+  Rendered meetings/_form.html.erb (8.7ms)
+  Rendered meetings/edit.html.erb within layouts/application (10.0ms)
+  [1m[36mMeeting Load (0.6ms)[0m  [1mSELECT "meetings".* FROM "meetings"[0m
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (12.0ms)
+  Rendered calendar/_month.html.erb (16.7ms)
+Completed 200 OK in 98ms (Views: 94.7ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/meetings/27" for 127.0.0.1 at 2016-02-13 08:43:20 +0300
+Processing by MeetingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KNsZJ21mxTXdPjnM81HloOfAnqgjMc6GQzpuxpQ4ccoX4GEIbb4zYo87xvvORc6FeKCC1bXQQt66sgUG+okSnQ==", "meeting"=>{"name"=>"Birthday", "start_time(1i)"=>"2016", "start_time(2i)"=>"2", "start_time(3i)"=>"13", "start_time(4i)"=>"05", "start_time(5i)"=>"38"}, "commit"=>"Update Meeting", "id"=>"27"}
+  [1m[35mMeeting Load (0.3ms)[0m  SELECT  "meetings".* FROM "meetings" WHERE "meetings"."id" = $1 LIMIT 1  [["id", 27]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/meetings/27
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/meetings/27" for 127.0.0.1 at 2016-02-13 08:43:20 +0300
+Processing by MeetingsController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mMeeting Load (0.3ms)[0m  [1mSELECT  "meetings".* FROM "meetings" WHERE "meetings"."id" = $1 LIMIT 1[0m  [["id", 27]]
+  Rendered meetings/show.html.erb within layouts/application (0.6ms)
+  [1m[35mMeeting Load (0.5ms)[0m  SELECT "meetings".* FROM "meetings"
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (12.7ms)
+  Rendered calendar/_month.html.erb (16.8ms)
+Completed 200 OK in 112ms (Views: 109.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-02-13 08:43:24 +0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (40.2ms)
+  Rendered users/new.html.erb within layouts/application (42.4ms)
+  [1m[36mMeeting Load (0.5ms)[0m  [1mSELECT "meetings".* FROM "meetings"[0m
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (12.7ms)
+  Rendered calendar/_month.html.erb (17.0ms)
+Completed 200 OK in 157ms (Views: 134.9ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-02-13 08:43:35 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+5LKuzyt2MAVN1yrjEgXY2OsEwJ7P8b7T/ybwhCBRVTEqbKUPHUul0cyo5yxXDxG/MwPf+3eSqO2dPACfjAmAw==", "user"=>{"name"=>"Alina", "email"=>"a@mail.ru", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (12.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'a@mail.ru' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  Rendered users/_form.html.erb (5.7ms)
+  Rendered users/new.html.erb within layouts/application (7.0ms)
+  [1m[36mMeeting Load (0.6ms)[0m  [1mSELECT "meetings".* FROM "meetings"[0m
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (11.8ms)
+  Rendered calendar/_month.html.erb (16.1ms)
+Completed 200 OK in 251ms (Views: 93.8ms | ActiveRecord: 13.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-02-13 08:43:47 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mvrgG18/ZQMf/8q9VNoEy6cUhn03T6TN7oGIPIQf5XOlwZg0X+eTVE36NYppzi/uOHSaAKGuKJUXCeP86q6GJA==", "user"=>{"name"=>"Alina", "email"=>"al@mail.ru", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'al@mail.ru' LIMIT 1[0m
+  [1m[35mSQL (44.1ms)[0m  INSERT INTO "users" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Alina"], ["email", "al@mail.ru"], ["password", "123"], ["created_at", "2016-02-13 05:43:47.628833"], ["updated_at", "2016-02-13 05:43:47.628833"]]
+  [1m[36m (39.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/39
+Completed 302 Found in 92ms (ActiveRecord: 84.1ms)
+
+
+Started GET "/users/39" for 127.0.0.1 at 2016-02-13 08:43:47 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 39]]
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  [1m[36mMeeting Load (0.6ms)[0m  [1mSELECT "meetings".* FROM "meetings"[0m
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (12.9ms)
+  Rendered calendar/_month.html.erb (17.9ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 39]]
+Completed 200 OK in 114ms (Views: 110.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/month_for_user" for 127.0.0.1 at 2016-02-13 08:43:51 +0300
+Processing by CalendarController#month_for_user as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 39]]
+  [1m[35mMeeting Load (0.7ms)[0m  SELECT "meetings".* FROM "meetings" WHERE "meetings"."user_id" = $1  [["user_id", 39]]
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (17.4ms)
+  Rendered calendar/_month.html.erb (23.6ms)
+  Rendered calendar/month_for_user.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 119ms (Views: 96.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/month_for_everyone" for 127.0.0.1 at 2016-02-13 08:43:52 +0300
+Processing by CalendarController#month_for_everyone as HTML
+  [1m[36mMeeting Load (0.7ms)[0m  [1mSELECT "meetings".* FROM "meetings"[0m
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (11.4ms)
+  Rendered calendar/_month.html.erb (16.3ms)
+  Rendered calendar/month_for_everyone.html.erb within layouts/application (18.4ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 39]]
+Completed 200 OK in 89ms (Views: 86.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/meetings/27/edit" for 127.0.0.1 at 2016-02-13 08:43:54 +0300
+Processing by MeetingsController#edit as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mMeeting Load (0.5ms)[0m  [1mSELECT  "meetings".* FROM "meetings" WHERE "meetings"."id" = $1 LIMIT 1[0m  [["id", 27]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "meetings".* FROM "meetings" WHERE "meetings"."id" = $1 LIMIT 1  [["id", "27"]]
+Redirected to http://localhost:3000/month_for_everyone
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/month_for_everyone" for 127.0.0.1 at 2016-02-13 08:43:54 +0300
+Processing by CalendarController#month_for_everyone as HTML
+  [1m[36mMeeting Load (0.7ms)[0m  [1mSELECT "meetings".* FROM "meetings"[0m
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (11.2ms)
+  Rendered calendar/_month.html.erb (15.9ms)
+  Rendered calendar/month_for_everyone.html.erb within layouts/application (17.2ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 39]]
+Completed 200 OK in 108ms (Views: 106.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/meetings/new" for 127.0.0.1 at 2016-02-13 08:44:00 +0300
+Processing by MeetingsController#new as HTML
+  Rendered meetings/_form.html.erb (9.9ms)
+  Rendered meetings/new.html.erb within layouts/application (11.5ms)
+  [1m[36mMeeting Load (0.5ms)[0m  [1mSELECT "meetings".* FROM "meetings"[0m
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (11.2ms)
+  Rendered calendar/_month.html.erb (15.9ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 39]]
+Completed 200 OK in 97ms (Views: 95.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/meetings" for 127.0.0.1 at 2016-02-13 08:44:22 +0300
+Processing by MeetingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rtRe3JIzH1YO1YshOzuXH98ieuAN7PLA3NQaTdcd/nCR7ybzkuvpAVzQdBYGL7w6QEJmnZsNfpglXHGNuaydJw==", "meeting"=>{"name"=>"Saint Valintine's day", "start_time(1i)"=>"2016", "start_time(2i)"=>"2", "start_time(3i)"=>"14", "start_time(4i)"=>"05", "start_time(5i)"=>"44"}, "commit"=>"Create Meeting"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 39]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "meetings" ("name", "start_time", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Saint Valintine's day"], ["start_time", "2016-02-14 05:44:00.000000"], ["user_id", 39], ["created_at", "2016-02-13 05:44:22.275145"], ["updated_at", "2016-02-13 05:44:22.275145"]]
+  [1m[35m (63.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/meetings/28
+Completed 302 Found in 73ms (ActiveRecord: 65.1ms)
+
+
+Started GET "/meetings/28" for 127.0.0.1 at 2016-02-13 08:44:22 +0300
+Processing by MeetingsController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mMeeting Load (0.4ms)[0m  [1mSELECT  "meetings".* FROM "meetings" WHERE "meetings"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  Rendered meetings/show.html.erb within layouts/application (0.7ms)
+  [1m[35mMeeting Load (0.5ms)[0m  SELECT "meetings".* FROM "meetings"
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (14.9ms)
+  Rendered calendar/_month.html.erb (19.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 39]]
+Completed 200 OK in 101ms (Views: 98.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/meetings/28/edit" for 127.0.0.1 at 2016-02-13 08:44:27 +0300
+Processing by MeetingsController#edit as HTML
+  Parameters: {"id"=>"28"}
+  [1m[35mMeeting Load (0.4ms)[0m  SELECT  "meetings".* FROM "meetings" WHERE "meetings"."id" = $1 LIMIT 1  [["id", 28]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "meetings".* FROM "meetings" WHERE "meetings"."id" = $1 LIMIT 1[0m  [["id", "28"]]
+  Rendered meetings/_form.html.erb (8.4ms)
+  Rendered meetings/edit.html.erb within layouts/application (9.7ms)
+  [1m[35mMeeting Load (0.5ms)[0m  SELECT "meetings".* FROM "meetings"
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (13.0ms)
+  Rendered calendar/_month.html.erb (17.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 39]]
+Completed 200 OK in 118ms (Views: 114.4ms | ActiveRecord: 1.4ms)
+
+
+Started PATCH "/meetings/28" for 127.0.0.1 at 2016-02-13 08:44:30 +0300
+Processing by MeetingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KcKACHI45/XZvI5s3Ef45zgg4WmqkV5diBTiVG38ah4W+fgncuARoou5cVvhU9PCp0D9FDxw0gVxnImUA00JSQ==", "meeting"=>{"name"=>"Saint Valintine's day", "start_time(1i)"=>"2016", "start_time(2i)"=>"2", "start_time(3i)"=>"14", "start_time(4i)"=>"05", "start_time(5i)"=>"44"}, "commit"=>"Update Meeting", "id"=>"28"}
+  [1m[35mMeeting Load (0.4ms)[0m  SELECT  "meetings".* FROM "meetings" WHERE "meetings"."id" = $1 LIMIT 1  [["id", 28]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/meetings/28
+Completed 302 Found in 6ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/meetings/28" for 127.0.0.1 at 2016-02-13 08:44:30 +0300
+Processing by MeetingsController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mMeeting Load (0.4ms)[0m  [1mSELECT  "meetings".* FROM "meetings" WHERE "meetings"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  Rendered meetings/show.html.erb within layouts/application (0.5ms)
+  [1m[35mMeeting Load (0.6ms)[0m  SELECT "meetings".* FROM "meetings"
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (14.4ms)
+  Rendered calendar/_month.html.erb (18.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 39]]
+Completed 200 OK in 93ms (Views: 89.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/month_for_user" for 127.0.0.1 at 2016-02-13 08:44:36 +0300
+Processing by CalendarController#month_for_user as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 39]]
+  [1m[36mMeeting Load (0.5ms)[0m  [1mSELECT "meetings".* FROM "meetings" WHERE "meetings"."user_id" = $1[0m  [["user_id", 39]]
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (18.1ms)
+  Rendered calendar/_month.html.erb (29.9ms)
+  Rendered calendar/month_for_user.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 104ms (Views: 101.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/month_for_everyone" for 127.0.0.1 at 2016-02-13 08:44:37 +0300
+Processing by CalendarController#month_for_everyone as HTML
+  [1m[35mMeeting Load (0.7ms)[0m  SELECT "meetings".* FROM "meetings"
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (13.1ms)
+  Rendered calendar/_month.html.erb (18.1ms)
+  Rendered calendar/month_for_everyone.html.erb within layouts/application (19.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 39]]
+Completed 200 OK in 108ms (Views: 105.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/sign_out" for 127.0.0.1 at 2016-02-13 08:46:04 +0300
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/main_page
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page" for 127.0.0.1 at 2016-02-13 08:46:04 +0300
+Processing by WelcomeController#domain as HTML
+  Rendered welcome/domain.html.erb within layouts/application (1.7ms)
+  [1m[35mMeeting Load (0.7ms)[0m  SELECT "meetings".* FROM "meetings"
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (14.9ms)
+  Rendered calendar/_month.html.erb (36.3ms)
+Completed 200 OK in 118ms (Views: 111.7ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/meetings/new" for 127.0.0.1 at 2016-02-13 08:46:06 +0300
+Processing by MeetingsController#new as HTML
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: meeting):
+  app/controllers/meetings_controller.rb:86:in `meeting_params'
+  app/controllers/meetings_controller.rb:20:in `new'
+
+
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.1ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (30.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (62.3ms)
+
+
+Started GET "/meetings/new" for 127.0.0.1 at 2016-02-13 08:46:06 +0300
+Processing by MeetingsController#new as HTML
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: meeting):
+  app/controllers/meetings_controller.rb:86:in `meeting_params'
+  app/controllers/meetings_controller.rb:20:in `new'
+
+
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.3ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.8ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (33.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (66.5ms)
+
+
+Started GET "/meetings/new" for 127.0.0.1 at 2016-02-13 08:46:20 +0300
+Processing by MeetingsController#new as HTML
+Completed 400 Bad Request in 7ms (ActiveRecord: 0.0ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: meeting):
+  app/controllers/meetings_controller.rb:86:in `meeting_params'
+  app/controllers/meetings_controller.rb:20:in `new'
+
+
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.8ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.1ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.8ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (29.4ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (60.2ms)
+
+
+Started GET "/meetings/new" for 127.0.0.1 at 2016-02-13 08:46:29 +0300
+Processing by MeetingsController#new as HTML
+  Rendered meetings/_form.html.erb (10.6ms)
+  Rendered meetings/new.html.erb within layouts/application (12.4ms)
+  [1m[36mMeeting Load (0.7ms)[0m  [1mSELECT "meetings".* FROM "meetings"[0m
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (14.2ms)
+  Rendered calendar/_month.html.erb (18.9ms)
+Completed 200 OK in 127ms (Views: 109.5ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/meetings" for 127.0.0.1 at 2016-02-13 08:49:25 +0300
+
+ActionController::RoutingError (No route matches [GET] "/meetings"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/alina/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/alina/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/alina/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (132.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.2ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (78.1ms)
+
+
+Started GET "/meetings/new" for 127.0.0.1 at 2016-02-13 08:50:07 +0300
+Processing by MeetingsController#new as HTML
+  Rendered meetings/_form.html.erb (8.8ms)
+  Rendered meetings/new.html.erb within layouts/application (10.0ms)
+  [1m[35mMeeting Load (0.5ms)[0m  SELECT "meetings".* FROM "meetings"
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (13.7ms)
+  Rendered calendar/_month.html.erb (18.3ms)
+Completed 200 OK in 118ms (Views: 102.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-13 08:50:10 +0300
+Processing by WelcomeController#domain as HTML
+  Rendered welcome/domain.html.erb within layouts/application (0.8ms)
+  [1m[36mMeeting Load (0.7ms)[0m  [1mSELECT "meetings".* FROM "meetings"[0m
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (14.2ms)
+  Rendered calendar/_month.html.erb (18.9ms)
+Completed 200 OK in 97ms (Views: 94.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/meetings/new" for 127.0.0.1 at 2016-02-13 08:50:12 +0300
+Processing by MeetingsController#new as HTML
+  Rendered meetings/_form.html.erb (28.7ms)
+  Rendered meetings/new.html.erb within layouts/application (30.0ms)
+  [1m[35mMeeting Load (0.7ms)[0m  SELECT "meetings".* FROM "meetings"
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (13.2ms)
+  Rendered calendar/_month.html.erb (18.3ms)
+Completed 200 OK in 121ms (Views: 119.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-02-13 08:50:38 +0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (3.1ms)
+  [1m[36mMeeting Load (0.7ms)[0m  [1mSELECT "meetings".* FROM "meetings"[0m
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (13.2ms)
+  Rendered calendar/_month.html.erb (17.7ms)
+Completed 200 OK in 119ms (Views: 117.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2016-02-13 08:50:56 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8N/lRDZE43ogFg1zoi3MOjfbN9hzCy7bn2RGzPZLRSjP5J1rNpwVLXIT8kSfOecfqLsrpeXqooNm7C0MmPomfw==", "session"=>{"email"=>"al@mail.ru", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "al@mail.ru"]]
+Redirected to http://localhost:3000/users/39
+Completed 302 Found in 21ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/users/39" for 127.0.0.1 at 2016-02-13 08:50:56 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 39]]
+  Rendered users/show.html.erb within layouts/application (0.1ms)
+  [1m[35mMeeting Load (0.7ms)[0m  SELECT "meetings".* FROM "meetings"
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (32.8ms)
+  Rendered calendar/_month.html.erb (37.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 39]]
+Completed 200 OK in 121ms (Views: 116.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/39" for 127.0.0.1 at 2016-02-13 08:55:44 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 39]]
+  Rendered users/show.html.erb within layouts/application (0.1ms)
+  [1m[36mMeeting Load (0.5ms)[0m  [1mSELECT "meetings".* FROM "meetings"[0m
+  Rendered /home/alina/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/simple_calendar-2.0.3/app/views/simple_calendar/_month_calendar.html.erb (13.8ms)
+  Rendered calendar/_month.html.erb (31.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 39]]
+Completed 200 OK in 127ms (Views: 103.7ms | ActiveRecord: 7.2ms)

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   root "welcome#domain"
   get '/main_page' => 'welcome#domain', as: 'main_page'
-  resources :users, :meetings
+  resources :users, :meetings, except: [:index]
   get 'profile', to: 'users#show'
   resources :sessions, except: [:index, :show]
   get '/sign_in' => 'sessions#new'
