@@ -13,11 +13,11 @@
  *= require_tree .
  *= require_self
  *= require simple_calendar
- 
+ *= require jquery-ui
  */
 body{
-  background-image: url(http://weblabfon.com/_ld/3/355_01.png);
-  background-repeat: repeat;
+  background-image: url("http://weblabfon.com/_ld/3/355_01.png");  
+  background-repeat: repeat; 
 }
 li {
   list-style-type: none;
@@ -29,31 +29,23 @@ ul {
 }
 
 section {
-    background-image: url(http://uconstructor.com/_ld/3/71495855.jpg);
-    width: 100%;
-    height: 72%;
-    display: flex;
-    padding: 10px;
-    background-color: #FBF5EF;
-    border: 1px solid #d6d6d6;
-    border-radius: 2px;
-}
-.form_for_meeting{
-  background-image: url(http://uconstructor.com/_ld/3/71495855.jpg);
+  display: flex;
+ } 
+.left_right_sides{
+   background-image: url(http://uconstructor.com/_ld/3/71495855.jpg); 
   width: 100%;
     height: 72%;
-   /* display: flex;*/
     padding: 10px;
     background-color: #FBF5EF;
-    border: 1px solid #d6d6d6;
+    border: none;
     border-radius: 2px;
 }
-.form_for_meeting h3{
+.left_right_sides h3{
   
   margin-top: 0;
 }
 
-.profile_section div {
+#profile_section div {
     width: 50%;
     border-radius: 2px;
 }
@@ -84,6 +76,15 @@ font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 password_field{
   width: 100px;
+}
+
+button{
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    background-color: white;
 }
 
 

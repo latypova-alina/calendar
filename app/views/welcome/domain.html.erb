@@ -1,7 +1,10 @@
 
 <% content_for :user_form do %>
+  <% if current_user == nil %>
+  <%=button_to "sign up", new_user_path, :class => "btn", :method => :get   %>
+  <%=button_to "sign in", new_session_path, :class => "btn", :method => :get  %>
   
-  <%=button_to "sign up", new_user_path, :class => "btn btn-primary", :method => :get   %>
-  <%=button_to "sign in", new_session_path, :class => "btn btn-primary", :method => :get  %>
+<%end%>
+
 
   <%end%>
